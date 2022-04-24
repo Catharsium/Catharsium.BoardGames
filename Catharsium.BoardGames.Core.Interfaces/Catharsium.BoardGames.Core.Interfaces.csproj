@@ -5,8 +5,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Catharsium.BoardGames.Core.Interfaces\Catharsium.BoardGames.Core.Interfaces.csproj" />
-  </ItemGroup>
-
 </Project>

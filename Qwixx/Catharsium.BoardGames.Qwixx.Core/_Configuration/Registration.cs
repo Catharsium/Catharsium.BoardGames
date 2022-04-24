@@ -1,8 +1,8 @@
-﻿using Catharsium.BoardGames.Qwixx.Core.Events;
+﻿using Catharsium.BoardGames.Core.Interfaces.Events.Interfaces;
+using Catharsium.BoardGames.Core.Interfaces.State.Models;
+using Catharsium.BoardGames.Qwixx.Core.Events;
 using Catharsium.BoardGames.Qwixx.Core.Events.Handlers;
-using Catharsium.BoardGames.Qwixx.Core.Status;
-using Catharsium.BoardGames.Qwixx.Interfaces.Events.Interfaces;
-using Catharsium.BoardGames.Qwixx.Interfaces.Status.Interfaces;
+using Catharsium.BoardGames.Qwixx.Interfaces.Status.Models;
 using Catharsium.Util.Configuration.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,9 +15,9 @@ public static class Registration
         var settings = config.Load<Settings>();
         services.AddSingleton<Settings, Settings>(provider => settings);
 
-        services.AddSingleton<IEventManager, EventManager>();
+        services.AddSingleton<IGameEventManager, QwixxEventManager>();
         services.AddSingleton<IReferee, Referee>();
-        services.AddSingleton<IGame, Game>();
+        services.AddSingleton<GameState, QwixxGame>();
 
         services.AddScoped<IGameEventHandler, CrossCellEventHandler>();
 

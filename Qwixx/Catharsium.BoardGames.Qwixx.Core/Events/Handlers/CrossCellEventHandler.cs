@@ -1,32 +1,23 @@
-﻿using Catharsium.BoardGames.Qwixx.Interfaces.Events.Enums;
-using Catharsium.BoardGames.Qwixx.Interfaces.Events.Interfaces;
-using Catharsium.BoardGames.Qwixx.Interfaces.Events.Models;
+﻿using Catharsium.BoardGames.Core.Interfaces.Events.Enums;
+using Catharsium.BoardGames.Core.Interfaces.Events.Interfaces;
+using Catharsium.BoardGames.Core.Interfaces.Events.Models;
 namespace Catharsium.BoardGames.Qwixx.Core.Events.Handlers;
 
 public class CrossCellEventHandler : IGameEventHandler
 {
-    private readonly IReferee referee;
-
-
-    public CrossCellEventHandler(IReferee referee)
+    public CrossCellEventHandler()
     {
-        this.referee = referee;
     }
 
 
-    public bool CanHandle(EventType eventType)
+    public bool CanHandle(GameEventType eventType)
     {
-        return eventType == EventType.CrossSquare;
+        return eventType == GameEventType.CrossSquare;
     }
 
 
-    public EventResult Handle(GameEvent gameEvent)
+    public GameEventResult Handle(GameEvent gameEvent)
     {
-        var resultType = EventResultType.NotAllowed;
-        if (this.referee.AllowsCrossCell(gameEvent.Player)) {
-            resultType = EventResultType.Success;
-        }
-
-        return new EventResult(resultType, "");
+        return new GameEventResult(GameEventResultType.Incomplete, "");
     }
 }

@@ -41,6 +41,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.BoardGames.Qwixx
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catharsium.BoardGames.Qwixx.UI.Basic.Tests", "Qwixx\Catharsium.BoardGames.Qwixx.UI.Basic.Tests\Catharsium.BoardGames.Qwixx.UI.Basic.Tests.csproj", "{6562B983-4CEE-44A4-ACE4-A8573261BFB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FBFCF69C-0F8D-4D1D-99EB-2FF35C8C76D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catharsium.BoardGames.Core.Interfaces", "Catharsium.BoardGames.Core.Interfaces\Catharsium.BoardGames.Core.Interfaces.csproj", "{DCA29946-D4FB-4D07-844E-BB1D62D33908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catharsium.BoardGames.Core.Logic", "Catharsium.BoardGames.Core.Logic\Catharsium.BoardGames.Core.Logic.csproj", "{E7F0F049-B98F-4099-8EC1-11F275E27076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catharsium.BoardGames.Core.Interfaces.Tests", "Catharsium.BoardGames.Core.Interfaces.Tests\Catharsium.BoardGames.Core.Interfaces.Tests.csproj", "{F5680A76-8E2B-48B1-8ED3-E3E30572815B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catharsium.BoardGames.Core.Logic.Tests", "Catharsium.BoardGames.Core.Logic.Tests\Catharsium.BoardGames.Core.Logic.Tests.csproj", "{9E499391-E3A9-4D54-9E85-2C3D545554EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +105,22 @@ Global
 		{6562B983-4CEE-44A4-ACE4-A8573261BFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6562B983-4CEE-44A4-ACE4-A8573261BFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6562B983-4CEE-44A4-ACE4-A8573261BFB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA29946-D4FB-4D07-844E-BB1D62D33908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA29946-D4FB-4D07-844E-BB1D62D33908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA29946-D4FB-4D07-844E-BB1D62D33908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA29946-D4FB-4D07-844E-BB1D62D33908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F0F049-B98F-4099-8EC1-11F275E27076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F0F049-B98F-4099-8EC1-11F275E27076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F0F049-B98F-4099-8EC1-11F275E27076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F0F049-B98F-4099-8EC1-11F275E27076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5680A76-8E2B-48B1-8ED3-E3E30572815B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5680A76-8E2B-48B1-8ED3-E3E30572815B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5680A76-8E2B-48B1-8ED3-E3E30572815B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5680A76-8E2B-48B1-8ED3-E3E30572815B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E499391-E3A9-4D54-9E85-2C3D545554EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E499391-E3A9-4D54-9E85-2C3D545554EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E499391-E3A9-4D54-9E85-2C3D545554EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E499391-E3A9-4D54-9E85-2C3D545554EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +142,10 @@ Global
 		{4ECE2F07-F190-4F13-A5C5-02DB007B166E} = {1D14D2D6-A682-4515-8EB0-58B8728627E5}
 		{F2532A3D-1771-4BF0-A0CD-F1E4733091BD} = {FCB9FF49-D662-4A8B-B4CC-CAC7B23B9388}
 		{6562B983-4CEE-44A4-ACE4-A8573261BFB5} = {FCB9FF49-D662-4A8B-B4CC-CAC7B23B9388}
+		{DCA29946-D4FB-4D07-844E-BB1D62D33908} = {FBFCF69C-0F8D-4D1D-99EB-2FF35C8C76D0}
+		{E7F0F049-B98F-4099-8EC1-11F275E27076} = {FBFCF69C-0F8D-4D1D-99EB-2FF35C8C76D0}
+		{F5680A76-8E2B-48B1-8ED3-E3E30572815B} = {FBFCF69C-0F8D-4D1D-99EB-2FF35C8C76D0}
+		{9E499391-E3A9-4D54-9E85-2C3D545554EA} = {FBFCF69C-0F8D-4D1D-99EB-2FF35C8C76D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E928EC29-AFCA-4BA9-AB87-11B37D9152A9}

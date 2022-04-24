@@ -1,5 +1,5 @@
-﻿using Catharsium.BoardGames.Qwixx._Configuration;
-using Catharsium.BoardGames.Qwixx.Interfaces.Events.Interfaces;
+﻿using Catharsium.BoardGames.Core.Interfaces.Events.Interfaces;
+using Catharsium.BoardGames.Qwixx._Configuration;
 using Catharsium.Util.IO.Console.Interfaces;
 using Catharsium.Util.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
@@ -31,7 +31,7 @@ public class RegistrationTests
         serviceCollection.AddQwixx(configuration);
         serviceCollection.ReceivedRegistration<Settings>();
 
-        serviceCollection.ReceivedRegistration<IEventManager>();
+        serviceCollection.ReceivedRegistration<IGameEventManager>();
     }
 
 
