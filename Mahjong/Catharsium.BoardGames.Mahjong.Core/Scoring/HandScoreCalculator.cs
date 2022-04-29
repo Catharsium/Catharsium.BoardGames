@@ -1,8 +1,8 @@
 ﻿using Catharsium.BoardGames.Mahjong.Interface.Entities;
 using Catharsium.BoardGames.Mahjong.Interface.Entities.Scoring;
+using Catharsium.BoardGames.Mahjong.Interface.Interfaces.Scoring;
 using Catharsium.BoardGames.Mahjong.Interface.Interfaces.Scoring.Multipliers;
 using Catharsium.BoardGames.Mahjong.Interface.Interfaces.Scoring.Points;
-using Catharsium.BoardGames.Mahjong.Interfaces.Interfaces.Scoring;
 using System;
 using System.Collections.Generic;
 

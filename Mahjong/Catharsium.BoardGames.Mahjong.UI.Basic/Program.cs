@@ -2,7 +2,7 @@
 using Catharsium.BoardGames.Mahjong.Interface.Entities;
 using Catharsium.BoardGames.Mahjong.Interface.Entities.Stones;
 using Catharsium.BoardGames.Mahjong.Interface.Interfaces.Factories;
-using Catharsium.BoardGames.Mahjong.Interfaces.Interfaces.Scoring;
+using Catharsium.BoardGames.Mahjong.Interface.Interfaces.Scoring;
 using Catharsium.Util.IO.Console._Configuration;
 using Catharsium.Util.IO.Console.Interfaces;
 using Microsoft.Extensions.Configuration;

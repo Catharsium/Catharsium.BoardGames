@@ -3,7 +3,7 @@ using Catharsium.Util.Configuration.Extensions;
 using Catharsium.Util.IO.Console._Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-namespace Catharsium.BoardGames.Qwixx._Configuration;
+namespace Catharsium.BoardGames.Qwixx.UI.Basic._Configuration;
 
 public static class Registration
 {

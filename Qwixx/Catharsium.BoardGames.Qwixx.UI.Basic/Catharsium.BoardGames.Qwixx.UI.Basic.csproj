@@ -19,5 +19,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Catharsium.BoardGames.Qwixx.Core\Catharsium.BoardGames.Qwixx.Core.csproj" />
   </ItemGroup>
-
+  
 </Project>

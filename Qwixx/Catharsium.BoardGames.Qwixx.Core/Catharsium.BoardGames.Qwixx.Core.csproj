@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Catharsium.BoardGames.Qwixx.Interfaces\Catharsium.BoardGames.Qwixx.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Catharsium.BoardGames.Core\Catharsium.BoardGames.Core.csproj" />
+    <ProjectReference Include="..\..\Catharsium.BoardGames.Interfaces\Catharsium.BoardGames.Interfaces.csproj" />
   </ItemGroup>
-
+  
 </Project>

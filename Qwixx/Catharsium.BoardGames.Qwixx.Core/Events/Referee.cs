@@ -1,6 +1,6 @@
-﻿using Catharsium.BoardGames.Core.Interfaces.Events.Interfaces;
-using Catharsium.BoardGames.Core.Interfaces.Events.Models;
-using Catharsium.BoardGames.Core.Interfaces.State.Models;
+﻿using Catharsium.BoardGames.Interfaces.Events.Interfaces;
+using Catharsium.BoardGames.Interfaces.Events.Models;
+using Catharsium.BoardGames.Interfaces.State.Models;
 namespace Catharsium.BoardGames.Qwixx.Core.Events;
 
 public class Referee : IReferee

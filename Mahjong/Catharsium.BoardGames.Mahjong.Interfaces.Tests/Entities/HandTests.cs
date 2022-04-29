@@ -2,7 +2,7 @@
 using Catharsium.Util.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-namespace Catharsium.BoardGames.Mahjong.Interfaces.Tests.Entities;
+namespace Catharsium.BoardGames.Mahjong.Interface.Tests.Entities;
 
 [TestClass]
 public class HandTests : TestFixture<Hand>

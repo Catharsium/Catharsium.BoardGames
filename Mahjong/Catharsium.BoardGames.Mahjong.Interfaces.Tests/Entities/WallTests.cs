@@ -3,7 +3,7 @@ using Catharsium.BoardGames.Mahjong.Interface.Entities.Stones;
 using Catharsium.Util.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-namespace Catharsium.BoardGames.Mahjong.Interfaces.Tests.Entities;
+namespace Catharsium.BoardGames.Mahjong.Interface.Tests.Entities;
 
 [TestClass]
 public class WallTests : TestFixture<Wall>
@@ -47,7 +47,7 @@ public class WallTests : TestFixture<Wall>
     private static List<Stone> GenerateStones(int number)
     {
         var result = new List<Stone>();
-        for (var i = 0; i < number; i++) {
+        for(var i = 0; i < number; i++) {
             result.Add(new Stone(2));
         }
 

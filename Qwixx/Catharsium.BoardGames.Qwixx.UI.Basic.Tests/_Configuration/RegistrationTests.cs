@@ -1,12 +1,12 @@
-﻿using Catharsium.BoardGames.Core.Interfaces.Events.Interfaces;
-using Catharsium.BoardGames.Qwixx._Configuration;
+﻿using Catharsium.BoardGames.Interfaces.Events.Interfaces;
+using Catharsium.BoardGames.Qwixx.UI.Basic._Configuration;
 using Catharsium.Util.IO.Console.Interfaces;
 using Catharsium.Util.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
-namespace Catharsium.BoardGames.Qwixx.Tests._Configuration;
+namespace Catharsium.BoardGames.Qwixx.UI.Basic.Tests._Configuration;
 
 [TestClass]
 public class RegistrationTests

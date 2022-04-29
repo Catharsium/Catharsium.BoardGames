@@ -1,11 +1,11 @@
-﻿using Catharsium.BoardGames.Core.Interfaces.Events.Enums;
-using Catharsium.BoardGames.Core.Interfaces.Events.Models;
-using Catharsium.BoardGames.Core.Interfaces.State.Models;
+﻿using Catharsium.BoardGames.Interfaces.Events.Models;
+using Catharsium.BoardGames.Interfaces.State.Models;
 using Catharsium.BoardGames.Qwixx.Core.Events;
-using Catharsium.BoardGames.Qwixx.Interfaces.Status.Models;
+using Catharsium.BoardGames.Qwixx.Core.Events.Models.Status;
+using Catharsium.BoardGames.Qwixx.Core.Tests._Fixture;
 using Catharsium.Util.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NSubstitute;
+
 namespace Catharsium.BoardGames.Qwixx.Core.Tests.Events;
 
 [TestClass]
@@ -20,8 +20,7 @@ public class RefereeTests : TestFixture<Referee>
     [TestInitialize]
     public void Initialize()
     {
-        this.GameEvent = new GameEvent(GameEventType.CrossSquare, 123);
-
+        this.GameEvent = new MockGameEvent(123);
         this.GameState = new QwixxGame();
         this.SetDependency(this.GameState);
     }

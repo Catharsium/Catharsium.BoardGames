@@ -1,6 +1,6 @@
-﻿using Catharsium.BoardGames.Core.Interfaces.Events.Enums;
-using Catharsium.BoardGames.Core.Interfaces.Events.Models;
+﻿using Catharsium.BoardGames.Interfaces.Events.Enums;
 using Catharsium.BoardGames.Qwixx.Core.Events.Handlers;
+using Catharsium.BoardGames.Qwixx.Core.Events.Models.Events;
 using Catharsium.Util.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Catharsium.BoardGames.Qwixx.Core.Tests.Events.Handlers;
@@ -13,7 +13,8 @@ public class CrossCellEventHandlerTests : TestFixture<CrossCellEventHandler>
     [TestMethod]
     public void CanHandle_SupportedType_ReturnsTrue()
     {
-        var actual = this.Target.CanHandle(GameEventType.CrossSquare);
+        var gameEvent = new CrossCellGameEvent(123, 234, 345);
+        var actual = this.Target.CanHandle(gameEvent);
         Assert.IsTrue(actual);
     }
 
@@ -21,7 +22,8 @@ public class CrossCellEventHandlerTests : TestFixture<CrossCellEventHandler>
     [TestMethod]
     public void CanHandle_UnsupportedType_ReturnsFalse()
     {
-        var actual = this.Target.CanHandle(GameEventType.FailedRoll);
+        var gameEvent = new FailedRollGameEvent(123);
+        var actual = this.Target.CanHandle(gameEvent);
         Assert.IsFalse(actual);
     }
 
@@ -32,10 +34,10 @@ public class CrossCellEventHandlerTests : TestFixture<CrossCellEventHandler>
     [TestMethod]
     public void Handle_Allowed_ReturnsSuccess()
     {
-        var gameEvent = new GameEvent(GameEventType.CrossSquare, 123);
+        var gameEvent = new CrossCellGameEvent(123, 234, 345);
         var actual = this.Target.Handle(gameEvent);
         Assert.IsNotNull(actual);
-        Assert.AreEqual(GameEventResultType.Success, actual.ResultType);
+        Assert.AreEqual(GameEventStatus.Success, actual.Status);
     }
 
     #endregion

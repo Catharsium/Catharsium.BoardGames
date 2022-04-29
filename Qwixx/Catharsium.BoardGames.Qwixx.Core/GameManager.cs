@@ -1,9 +1,9 @@
-﻿using Catharsium.BoardGames.Core.Interfaces.State.Interfaces;
+﻿using Catharsium.BoardGames.Interfaces.State.Interfaces;
 namespace Catharsium.BoardGames.Qwixx.Core;
 
 public class GameManager : IGameManager
 {
-    public bool CrossCell()
+    public bool CrossCell(int player, int row, int column)
     {
         throw new NotImplementedException();
     }
