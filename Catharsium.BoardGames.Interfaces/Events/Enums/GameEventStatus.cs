@@ -4,5 +4,6 @@ public enum GameEventStatus
 {
     Incomplete,
     NotAllowed,
-    Success
+    Success,
+    Failed
 }

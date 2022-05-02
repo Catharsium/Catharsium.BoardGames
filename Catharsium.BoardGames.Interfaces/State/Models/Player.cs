@@ -1,12 +1,15 @@
 ﻿namespace Catharsium.BoardGames.Interfaces.State.Models;
 
-public class Player
+public abstract class Player
 {
-    public string Name { get; set; }
+    public int Id { get; }
+
+    public string Name { get; }
 
 
-    public Player(string name)
+    public Player(int id, string name)
     {
+        this.Id = id;
         this.Name = name;
     }
 }

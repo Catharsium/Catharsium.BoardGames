@@ -2,5 +2,12 @@
 
 public class Cell
 {
+    public int Id;
     public bool IsChecked { get; set; }
+
+
+    public Cell(int id)
+    {
+        this.Id = id;
+    }
 }

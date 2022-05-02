@@ -1,21 +1,31 @@
 ﻿using Catharsium.BoardGames.Interfaces.Events.Interfaces;
 using Catharsium.BoardGames.Interfaces.Events.Models;
-using Catharsium.BoardGames.Interfaces.State.Models;
+using Catharsium.BoardGames.Qwixx.Core.Events.Models;
+using Catharsium.BoardGames.Qwixx.Core.State.Models;
 namespace Catharsium.BoardGames.Qwixx.Core.Events;
 
 public class Referee : IReferee
 {
-    private readonly GameState game;
+    private readonly QwixxGameState gameState;
 
 
-    public Referee(GameState game)
+    public Referee(QwixxGameState gameState)
     {
-        this.game = game;
+        this.gameState = gameState;
     }
 
 
     public bool Allows(GameEvent gameEvent)
     {
-        return this.game.CurrentPlayer == gameEvent.Player;
+        var result = this.gameState.CurrentPlayer == gameEvent.Player;
+        if(gameEvent is CrossCellGameEvent @event) {
+            result &= !this.gameState
+                .Players.Single(p => p.Id == @event.Player)
+                .Rows.Single(r => r.Id == @event.Row)
+                .Cells.Single(c => c.Id == @event.Cell)
+                .IsChecked;
+        };
+
+        return result;
     }
 }

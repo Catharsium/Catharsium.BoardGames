@@ -1,14 +1,16 @@
-﻿namespace Catharsium.BoardGames.Interfaces.State.Models;
+﻿using Catharsium.BoardGames.Interfaces.State.Interfaces;
+namespace Catharsium.BoardGames.Interfaces.State.Models;
 
-public abstract class GameState
+public abstract class GameState<T> : IGameState<T> where T : Player
 {
-    private Dictionary<int, Player> Players { get; set; }
+    public List<T> Players { get; set; }
 
     public int CurrentPlayer { get; set; }
 
 
-    public GameState()
+    public GameState(IEnumerable<T> players)
     {
-        this.Players = new Dictionary<int, Player>();
+        this.Players = new List<T>();
+        this.Players.AddRange(players);
     }
 }

@@ -1,9 +1,8 @@
 ﻿using Catharsium.BoardGames.Interfaces.Events.Interfaces;
-using Catharsium.BoardGames.Interfaces.State.Models;
 using Catharsium.BoardGames.Qwixx.Core._Configuration;
 using Catharsium.BoardGames.Qwixx.Core.Events;
 using Catharsium.BoardGames.Qwixx.Core.Events.Handlers;
-using Catharsium.BoardGames.Qwixx.Core.Events.Models.Status;
+using Catharsium.BoardGames.Qwixx.Core.State.Models;
 using Catharsium.Util.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,9 +22,8 @@ public class RegistrationTests
         serviceCollection.AddQwixxCore(configuration);
         serviceCollection.ReceivedRegistration<Settings>();
 
-        serviceCollection.ReceivedRegistration<IGameEventManager>();
         serviceCollection.ReceivedRegistration<IReferee, Referee>();
-        serviceCollection.ReceivedRegistration<GameState, QwixxGame>();
+        serviceCollection.ReceivedRegistration<QwixxGameState, QwixxGameState>();
 
         serviceCollection.ReceivedRegistration<IGameEventHandler, CrossCellEventHandler>();
     }
